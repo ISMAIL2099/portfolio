@@ -7,61 +7,66 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #808080; color: #ffffff; }
-        .navbar, .footer, header { background-color: #505050 !important; }
+        .navbar, .footer { background-color: #505050 !important; }
         .card { background-color: #606060; color: #ffffff; }
         .btn-primary { background-color: #ffffff; border-color: #ffffff; color: #000; }
         .btn-primary:hover { background-color: #e0e0e0; border-color: #e0e0e0; color: #000; }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+        }
         header {
             position: fixed;
             left: 0;
             top: 0;
-            height: 100vh;
+            height: calc(100vh);
             width: 250px;
             background-color: #505050;
             color: #ffffff;
             padding: 20px;
             text-align: center;
+            z-index: 1;
         }
         main {
             margin-left: 270px;
-        }
-        .navbar {
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        .navbar-nav {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin-top: 70px; /* Espace pour éviter que le contenu passe sous la navbar */
         }
     </style>
 </head>
-<body>
+<body>    
     <header>
         <h1>Bienvenue</h1>
         <p>BTS SIO - Portfolio</p>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container flex-column">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
+        <div style="height: 100px;"></div>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#moi">moi même</a></li>
+            <li class="nav-item"><a class="nav-link" href="#BTS">La formation</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+            <li class="nav-item"><a class="nav-link" href="#veile">veile</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+    </header>
+    
+    <main>
+        <section id="moi" class="container my-5">
+            <h2 class="text-center">Introduction</h2>
+            <p class="text-center">Je suis étudiant en BTS SIO, passionné par le développement web et la cybersécurité.</p>
+        </section>
+
+        <section id="BTS" class="container my-5">
+            <h2 class="text-center">Le BTS SIO.</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Je suis étudiant en BTS SIO, passionné par le développement web et la cybersécurité.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>J'aime explorer de nouvelles technologies et travailler sur des projets innovants.</p>
                 </div>
             </div>
-        </nav>
-    </header>
-    <main>
-        <section id="about" class="container my-5">
-            <h2 class="text-center">À propos de moi</h2>
-            <p class="text-center">Je suis étudiant en BTS SIO, passionné par le développement web et la cybersécurité.</p>
         </section>
         
         <section id="projects" class="container my-5">
@@ -90,11 +95,29 @@
         
         <section id="skills" class="container my-5">
             <h2 class="text-center">Compétences</h2>
-            <ul>
-                <li>Développement web (HTML, CSS, JavaScript, PHP)</li>
-                <li>Gestion de base de données (MySQL, PostgreSQL)</li>
-                <li>Cybersécurité et réseau</li>
-            </ul>
+            <div class="mb-3">
+                <label>Développement web (HTML, CSS, JavaScript, PHP)</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Gestion de base de données (MySQL, PostgreSQL)</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 70%;">70%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Cybersécurité et réseau</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 60%;">60%</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="veile" class="container my-5">
+            <h2 class="text-center">veile</h2>
+            <p class="text-center">sciense et ia?</p>
         </section>
         
         <section id="contact" class="container my-5">
