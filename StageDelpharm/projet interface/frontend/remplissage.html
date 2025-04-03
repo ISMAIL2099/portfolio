@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Élément</title>
+    <!-- Lien vers la feuille de style Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar sticky-top" style="background-color: #98FB98">
+        <div class="container-fluid" style="width: 100%;">
+            <a class="navbar-brand" href="accueilConnecter.html">SUPER APPLI</a>
+            <div class="d-flex" style="flex: 4;">
+                <div class="dropdown" style="flex: 1;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu 1
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <a class="dropdown-item" href="#">Option 1</a>
+                        <a class="dropdown-item" href="#">Option 2</a>
+                        <a class="dropdown-item" href="#">Option 3</a>
+                    </div>
+                </div>
+        
+                <div class="dropdown" style="flex: 1;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu 2
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                        <a class="dropdown-item" href="#">Option A</a>
+                        <a class="dropdown-item" href="#">Option B</a>
+                        <a class="dropdown-item" href="#">Option C</a>
+                    </div>
+                </div>
+        
+                <div class="dropdown" style="flex: 1;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu 3
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                        <a class="dropdown-item" href="#">Option X</a>
+                        <a class="dropdown-item" href="#">Option Y</a>
+                        <a class="dropdown-item" href="#">Option Z</a>
+                    </div>
+                </div>
+        
+                <div class="dropdown" style="flex: 1;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu 4
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                        <a class="dropdown-item" href="#">Option I</a>
+                        <a class="dropdown-item" href="#">Option II</a>
+                        <a class="dropdown-item" href="#">Option III</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Ajouter un Élément au Tableau</h2>
+        
+        <!-- Formulaire pour ajouter un nouvel élément -->
+        <form id="add-form" class="mb-4">
+            <div class="mb-3">
+                <label for="qui" class="form-label">qui</label>
+                <input type="text" class="form-control" id="qui" required>
+            </div>
+            <div class="mb-3">
+                <label for="quand" class="form-label">quand</label>
+                <input type="number" class="form-control" id="quand" required>
+            </div>
+            <div class="mb-3">
+                <label for="ou" class="form-label">ou</label>
+                <input type="text" class="form-control" id="ou" required>
+            </div>
+            <div class="mb-3">
+                <label for="CC" class="form-label">comment/combien</label>
+                <input type="text" class="form-control" id="CC" required>
+            </div>
+            <input type="hidden" id="editing-id"> <!-- Champ caché pour l'ID de l'élément en cours de modification -->
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </form>
+
+        <!-- Lien vers la page du tableau -->
+        <a href="historiqueEVQ.html" class="btn btn-link">Voir le Tableau</a>
+    </div>
+
+    <!-- Script Bootstrap pour le bon fonctionnement des composants -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Script JavaScript pour ajouter ou modifier un élément -->
+        <script>
+            // Fonction pour enregistrer ou modifier un élément
+            function ajouterOuModifierElement(event) {
+                event.preventDefault(); // Empêcher le rechargement de la page
+    
+                // Récupérer les valeurs du formulaire
+                const qui = document.getElementById('qui').value;
+                const quand = document.getElementById('quand').value;
+                const ou = document.getElementById('ou').value;
+                const cc = document.getElementById('CC').value;
+                const id = document.getElementById('editing-id').value;
+    
+                // Vérification des valeurs (facultatif)
+                if (qui && quand && ou && cc) {
+                    // Récupérer les données actuelles
+                    const data = JSON.parse(localStorage.getItem('tableauData')) || [];
+    
+                    if (id) {
+                        // Si un ID est présent, on modifie l'élément correspondant
+                        const index = data.findIndex(item => item.id == id);
+                        if (index !== -1) {
+                            data[index] = {
+                                id: parseInt(id),
+                                qui: qui,
+                                quand: parseInt(quand),
+                                ou: ou,
+                                cc:cc
+                            };
+                        }
+                    } else {
+                        // Si aucun ID, c'est un ajout
+                        const nouvelElement = {
+                            id: data.length + 1,
+                            qui: qui,
+                            quand: parseInt(quand),
+                            ou: ou,
+                            cc:cc
+                        };
+                        data.push(nouvelElement);
+                    }
+    
+                    // Sauvegarder les données mises à jour dans localStorage
+                    localStorage.setItem('tableauData', JSON.stringify(data));
+    
+                    // Réinitialiser le formulaire
+                    document.getElementById('add-form').reset();
+                    document.getElementById('editing-id').value = ''; // Réinitialiser l'ID caché
+    
+                    // Changer le titre du formulaire
+                    document.getElementById('form-title').textContent = 'Ajouter un Élément';
+                }
+            }
+    
+            // Fonction pour pré-remplir le formulaire en mode modification
+            function preRemplirFormulaire() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const id = urlParams.get('id');
+    
+                if (id) {
+                    const data = JSON.parse(localStorage.getItem('tableauData')) || [];
+                    const element = data.find(item => item.id == id);
+                    if (element) {
+                        // Remplir les champs du formulaire avec les données existantes
+                        document.getElementById('qui').value = element.qui;
+                        document.getElementById('quand').value = element.quand;
+                        document.getElementById('ou').value = element.ou;
+                        document.getElementById('CC').value = element.cc;
+                        document.getElementById('editing-id').value = element.id;
+
+                        // Modifier le titre du formulaire pour indiquer qu'on est en mode modification
+                        document.getElementById('form-title').textContent = 'Modifier un Élément';
+                    }
+                }
+            }
+
+            // Écouteur d'événements pour l'envoi du formulaire
+            document.getElementById('add-form').addEventListener('submit', ajouterOuModifierElement);
+
+            // Pré-remplir le formulaire si on est en mode modification
+            window.onload = preRemplirFormulaire;
+        </script>
+    <!-- Footer sticky (pied de page) -->
+    <footer class="text-center py-3 mt-auto fixed-bottom" style="background-color: #98FB98">
+        <p>&copy; 2025 Mon Application. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

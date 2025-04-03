@@ -1,0 +1,113 @@
+</html><!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Connexion</title>
+
+    <!-- Lien vers le CSS de Bootstrap (via CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="../backend/classes/Personne.js"></script> <!-- Lien vers le fichier JS -->
+</head>
+<body class="d-flex flex-column min-vh-100" style="background-color: #f8f9fa;">
+
+    <!-- Navbar sticky (barre de navigation) -->
+    <nav class="navbar sticky-top" style="background-color: #98FB98">
+        <div class="container-fluid" style="width: 100%;">
+            <a class="navbar-brand" href="PageAccueil.html">SUPER APPLI</a>
+            <div class="d-flex" style="flex: 4;">
+                <div class="dropdown" style="flex: 1;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu 1
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <a class="dropdown-item" href="#">Option 1</a>
+                        <a class="dropdown-item" href="#">Option 2</a>
+                        <a class="dropdown-item" href="#">Option 3</a>
+                    </div>
+                </div>
+        
+                <div class="dropdown" style="flex: 1;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu 2
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                        <a class="dropdown-item" href="#">Option A</a>
+                        <a class="dropdown-item" href="#">Option B</a>
+                        <a class="dropdown-item" href="#">Option C</a>
+                    </div>
+                </div>
+        
+                <div class="dropdown" style="flex: 1;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu 3
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                        <a class="dropdown-item" href="#">Option X</a>
+                        <a class="dropdown-item" href="#">Option Y</a>
+                        <a class="dropdown-item" href="#">Option Z</a>
+                    </div>
+                </div>
+        
+                <div class="dropdown" style="flex: 1;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu 4
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                        <a class="dropdown-item" href="#">Option I</a>
+                        <a class="dropdown-item" href="#">Option II</a>
+                        <a class="dropdown-item" href="#">Option III</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="d-flex justify-content-center align-items-center flex-grow-1">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title text-center">Connexion</h5>
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Identifiant</label>
+                        <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Mot de passe</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer sticky (pied de page) -->
+    <footer class="text-center py-3 mt-auto fixed-bottom" style="background-color: #98FB98">
+        <p>&copy; 2025 Mon Application. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Fonction pour gérer la soumission du formulaire
+        function handleLogin(event) {
+            event.preventDefault(); // Empêche la soumission du formulaire par défaut
+
+            // Récupération des valeurs des champs du formulaire
+            const inputUsername = document.getElementById('username').value;
+            const inputPassword = document.getElementById('password').value;
+
+            // Vérification des identifiants via la méthode login de l'objet user
+            user2.login(inputUsername, inputPassword);
+            user.login(inputUsername,inputPassword);
+            
+            
+        }
+    </script>
+
+    <!-- Lien vers les scripts JS de Bootstrap (via CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

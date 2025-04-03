@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio - BTS SIO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #808080; color: #ffffff; }
-        .navbar, .footer { background-color: #505050 !important; }
-        .card { background-color: #606060; color: #ffffff; }
-        .btn-primary { background-color: #ffffff; border-color: #ffffff; color: #000; }
-        .btn-primary:hover { background-color: #e0e0e0; border-color: #e0e0e0; color: #000; }
+        body {
+            background-color: #808080;
+            color: #ffffff;
+        }
+
+        .navbar,
+        .footer {
+            background-color: #505050 !important;
+        }
+
+        .card {
+            background-color: #606060;
+            color: #ffffff;
+        }
+
+        .btn-primary {
+            background-color: #ffffff;
+            border-color: #ffffff;
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: #e0e0e0;
+            border-color: #e0e0e0;
+            color: #000;
+        }
+
         .navbar {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 2;
         }
+
         header {
             position: fixed;
             left: 0;
@@ -29,13 +53,16 @@
             text-align: center;
             z-index: 1;
         }
+
         main {
             margin-left: 270px;
-            margin-top: 70px; /* Espace pour éviter que le contenu passe sous la navbar */
+            margin-top: 70px;
+            /* Espace pour éviter que le contenu passe sous la navbar */
         }
     </style>
 </head>
-<body>    
+
+<body>
     <header>
         <h1>Bienvenue</h1>
         <p>BTS SIO - Portfolio</p>
@@ -43,6 +70,7 @@
         <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="#moi">A propos de moi</a></li>
             <li class="nav-item"><a class="nav-link" href="#BTS">La formation</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Stages">Mes Stages</a></li>
             <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
             <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
             <li class="nav-item"><a class="nav-link" href="#veile">veille</a></li>
@@ -50,43 +78,93 @@
         </ul>
 
     </header>
-    
+
     <main>
         <section id="moi" class="container my-5">
             <h2 class="text-center">A propos de moi</h2>
-            <p class="text-center">Je suis un passionné d’arts martiaux, pratiquant à la fois le judo et le JJB. Toujours en quête de perfectionnement, je mets autant de rigueur sur les tatamis que dans mes études.
-                Actuellement en BTS SIO, je me forme aux métiers de l’informatique, alliant logique et stratégie, comme dans mes disciplines sportives. Entre technique, discipline et persévérance, je cherche à progresser aussi bien dans le combat que dans le code.</p>
+            <p class="text-center">Je suis un passionné d’arts martiaux, pratiquant à la fois le judo et le JJB.
+                Toujours en quête de perfectionnement, je mets autant de rigueur sur les tatamis que dans mes études.
+                Actuellement en BTS SIO, je me forme aux métiers de l’informatique, alliant logique et stratégie, comme
+                dans mes disciplines sportives. Entre technique, discipline et persévérance, je cherche à progresser
+                aussi bien dans le combat que dans le code.</p>
         </section>
 
         <section id="BTS" class="container my-5">
-            <h2 class="text-center">Le BTS SIO</h2>
-            <p><center>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme de niveau Bac +2 qui forme des professionnels capables de gérer et de développer des solutions informatiques adaptées aux besoins des entreprises. Il s’adresse aux passionnés d’informatique souhaitant acquérir des compétences techniques et opérationnelles dans ce domaine.  
+            <h2 class="text-center">Pourqoui le BTS SIO ?</h2>
+            <p>
+                <center>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme de niveau Bac +2 qui forme
+                    des professionnels capables de gérer et de développer des solutions informatiques adaptées aux
+                    besoins des entreprises. Il s’adresse aux passionnés d’informatique souhaitant acquérir des
+                    compétences techniques et opérationnelles dans ce domaine.
 
-                Le BTS SIO se divise en deux spécialités :  
-                - SISR (Solutions d’Infrastructure, Systèmes et Réseaux) : axée sur l’administration des systèmes et réseaux, la cybersécurité et le support technique.  
-                - SLAM (Solutions Logicielles et Applications Métier) : orientée vers le développement d’applications, la programmation et la gestion de bases de données.  
-                
-                Ce diplôme permet d’accéder à des métiers comme développeur, administrateur systèmes et réseaux, technicien support, analyste programmeur ou encore de poursuivre vers une licence ou un bachelor en informatique. Avec l’évolution constante des technologies, le BTS SIO offre de nombreuses opportunités dans le secteur du numérique.</center></p>
+                    Le BTS SIO se divise en deux spécialités :
+                    - SISR (Solutions d’Infrastructure, Systèmes et Réseaux) : axée sur l’administration des systèmes et
+                    réseaux, la cybersécurité et le support technique.
+                    - SLAM (Solutions Logicielles et Applications Métier) : orientée vers le développement
+                    d’applications, la programmation et la gestion de bases de données.
+
+                    Ce diplôme permet d’accéder à des métiers comme développeur, administrateur systèmes et réseaux,
+                    technicien support, analyste programmeur ou encore de poursuivre vers une licence ou un bachelor en
+                    informatique. Avec l’évolution constante des technologies, le BTS SIO offre de nombreuses
+                    opportunités dans le secteur du numérique.</center>
+            </p>
             <div class="row">
-                <div class="col-md-6">
-                    <h2 class="text-center">Option SLAM</h2>
-                    <p>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme en deux ans qui forme des spécialistes en informatique. Il propose deux options : SLAM (Solutions Logicielles et Applications Métier) et SISR (Solutions d’Infrastructure, Systèmes et Réseaux).
 
-                        L’option SLAM est dédiée au développement et à la gestion d’applications. Elle permet d’acquérir des compétences en programmation, conception de bases de données, développement web et mobile, gestion de projet et cybersécurité. Les étudiants apprennent à créer et maintenir des logiciels adaptés aux besoins des entreprises.
-                        
-                        Ce cursus ouvre des perspectives vers des métiers comme développeur d’applications, analyste programmeur, concepteur de logiciels ou encore ingénieur en développement. Il permet aussi de poursuivre des études vers une licence ou un bachelor en informatique.</p>
-                </div>
-                <div class="col-md-6">
-                    <h2 class="text-center">Option SISR</h2>
-                    <p>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme en deux ans qui forme des spécialistes en informatique. Il propose deux options : SLAM (Solutions Logicielles et Applications Métier) et SISR (Solutions d’Infrastructure, Systèmes et Réseaux).  
+                <h2 class="text-center">Option SLAM</h2>
+                <p>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme en deux ans qui forme des
+                    spécialistes en informatique. Il propose deux options : SLAM (Solutions Logicielles et Applications
+                    Métier) et SISR (Solutions d’Infrastructure, Systèmes et Réseaux).
 
-                        L’option SISR est axée sur l’administration des réseaux et des systèmes informatiques. Elle permet d’acquérir des compétences en gestion des serveurs, sécurité informatique, maintenance des infrastructures, virtualisation et support technique. Les étudiants apprennent à déployer et sécuriser des réseaux pour répondre aux besoins des entreprises.  
-                        
-                        Ce cursus ouvre des perspectives vers des métiers comme administrateur systèmes et réseaux, technicien support, ingénieur en cybersécurité ou encore responsable IT. Il permet également de poursuivre des études vers une licence professionnelle ou un bachelor en informatique.</p>
-                </div>
+                    L’option SLAM est dédiée au développement et à la gestion d’applications. Elle permet d’acquérir des
+                    compétences en programmation, conception de bases de données, développement web et mobile, gestion
+                    de projet et cybersécurité. Les étudiants apprennent à créer et maintenir des logiciels adaptés aux
+                    besoins des entreprises.
+
+                    Ce cursus ouvre des perspectives vers des métiers comme développeur d’applications, analyste
+                    programmeur, concepteur de logiciels ou encore ingénieur en développement. Il permet aussi de
+                    poursuivre des études vers une licence ou un bachelor en informatique.</p>
+
             </div>
         </section>
-        
+
+        <section id="Stages" class="container my-5">
+            <h2 class="text-center">Mes stages durant la formation</h2>
+            <p>
+                <center>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme de niveau Bac +2 qui forme
+                    des professionnels capables de gérer et de développer des solutions informatiques adaptées aux
+                    besoins des entreprises. Il s’adresse aux passionnés d’informatique souhaitant acquérir des
+                    compétences techniques et opérationnelles dans ce domaine.
+
+                    Le BTS SIO se divise en deux spécialités :
+                    - SISR (Solutions d’Infrastructure, Systèmes et Réseaux) : axée sur l’administration des systèmes et
+                    réseaux, la cybersécurité et le support technique.
+                    - SLAM (Solutions Logicielles et Applications Métier) : orientée vers le développement
+                    d’applications, la programmation et la gestion de bases de données.
+
+                    Ce diplôme permet d’accéder à des métiers comme développeur, administrateur systèmes et réseaux,
+                    technicien support, analyste programmeur ou encore de poursuivre vers une licence ou un bachelor en
+                    informatique. Avec l’évolution constante des technologies, le BTS SIO offre de nombreuses
+                    opportunités dans le secteur du numérique.</center>
+            </p>
+            <div class="row">
+
+                <h2 class="text-center">Option SLAM</h2>
+                <p>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme en deux ans qui forme des
+                    spécialistes en informatique. Il propose deux options : SLAM (Solutions Logicielles et Applications
+                    Métier) et SISR (Solutions d’Infrastructure, Systèmes et Réseaux).
+
+                    L’option SLAM est dédiée au développement et à la gestion d’applications. Elle permet d’acquérir des
+                    compétences en programmation, conception de bases de données, développement web et mobile, gestion
+                    de projet et cybersécurité. Les étudiants apprennent à créer et maintenir des logiciels adaptés aux
+                    besoins des entreprises.
+
+                    Ce cursus ouvre des perspectives vers des métiers comme développeur d’applications, analyste
+                    programmeur, concepteur de logiciels ou encore ingénieur en développement. Il permet aussi de
+                    poursuivre des études vers une licence ou un bachelor en informatique.</p>
+
+            </div>
+        </section>
+
         <section id="projects" class="container my-5">
             <h2 class="text-center">Mes Projets</h2>
             <div class="row">
@@ -94,7 +172,8 @@
                     <div class="card">
                         <img src="https://via.placeholder.com/300" class="card-img-top" alt="Projet 1">
                         <div class="card-body">
-                            <h5 class="card-title">Projet 1</h5>
+                            <h5 class="card-title">Projet 1 : GeoWorld</h5>
+                            <img src="" alt="">
                             <p class="card-text">Description du projet.</p>
                         </div>
                     </div>
@@ -103,32 +182,50 @@
                     <div class="card">
                         <img src="https://via.placeholder.com/300" class="card-img-top" alt="Projet 2">
                         <div class="card-body">
-                            <h5 class="card-title">Projet 2</h5>
+                            <h5 class="card-title">Projet 2 : Sushi-App</h5>
+                            <p class="card-text">Description du projet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Projet 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 3 : Kotlin's Bizzares Adventures</h5>
+                            <p class="card-text">Description du projet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Projet 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 4 : Projet savon</h5>
                             <p class="card-text">Description du projet.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <section id="skills" class="container my-5">
             <h2 class="text-center">Compétences</h2>
             <div class="mb-3">
                 <label>Développement web (HTML, CSS, JavaScript, PHP)</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 80%;">80%</div>
+                <div class="img">
+                    <img src="" alt="">
                 </div>
             </div>
             <div class="mb-3">
                 <label>Gestion de base de données (MySQL, PostgreSQL)</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 70%;">70%</div>
+                <div class="img">
+                    <img src="" alt="">
                 </div>
             </div>
             <div class="mb-3">
                 <label>Cybersécurité et réseau</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 60%;">60%</div>
+                <div class="img">
+                    <img src="" alt="">
                 </div>
             </div>
         </section>
@@ -137,7 +234,7 @@
             <h2 class="text-center">veille</h2>
             <p class="text-center">sciense et ia?</p>
         </section>
-        
+
         <section id="contact" class="container my-5">
             <h2 class="text-center">Contact</h2>
             <form>
@@ -157,11 +254,12 @@
             </form>
         </section>
     </main>
-    
+
     <footer class="footer text-white text-center py-3">
         <p>&copy; 2025 Mon Portfolio - BTS SIO</p>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

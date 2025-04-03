@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar avec Dropdowns</title>
+  <!-- Lien vers le CSS de Bootstrap -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid" style="width: 100%;">
+      <!-- Nom du site qui occupe un cinquième de la navbar -->
+      <a class="navbar-brand" href="#" style="flex: 1;">Nom du Site</a>
+
+      <!-- Dropdowns qui occupent les autres quatre cinquièmes -->
+      <div class="d-flex" style="flex: 4;">
+        <div class="dropdown" style="flex: 1;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu 1
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <a class="dropdown-item" href="#">Option 1</a>
+            <a class="dropdown-item" href="#">Option 2</a>
+            <a class="dropdown-item" href="#">Option 3</a>
+          </div>
+        </div>
+
+        <div class="dropdown" style="flex: 1;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu 2
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+            <a class="dropdown-item" href="#">Option A</a>
+            <a class="dropdown-item" href="#">Option B</a>
+            <a class="dropdown-item" href="#">Option C</a>
+          </div>
+        </div>
+
+        <div class="dropdown" style="flex: 1;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu 3
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+            <a class="dropdown-item" href="#">Option X</a>
+            <a class="dropdown-item" href="#">Option Y</a>
+            <a class="dropdown-item" href="#">Option Z</a>
+          </div>
+        </div>
+
+        <div class="dropdown" style="flex: 1;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu 4
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+            <a class="dropdown-item" href="#">Option I</a>
+            <a class="dropdown-item" href="#">Option II</a>
+            <a class="dropdown-item" href="#">Option III</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scripts Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
