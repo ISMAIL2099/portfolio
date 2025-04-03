@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio - BTS SIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #808080;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .navbar,
+        .footer {
+            background-color: #505050 !important;
+        }
+
+        .card {
+            background-color: #606060;
+            color: #ffffff;
+        }
+
+        .btn-primary {
+            background-color: #ffffff;
+            border-color: #ffffff;
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: #e0e0e0;
+            border-color: #e0e0e0;
+            color: #000;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+        }
+
+        header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 250px;
+            background-color: #505050;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        main {
+            margin-left: 270px;
+            margin-top: 70px;
+        }
+
+        /* Chaque section prend toute la hauteur de la fenêtre */
+        section {
+            height: 100vh;
+            padding-top: 20px;
+        }
+
+        /* Centrage du texte dans les sections */
+        section h2 {
+            text-align: center;
+        }
+
+        /* Marge supplémentaire en bas de la page */
+        footer {
+            background-color: #505050;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenue</h1>
+        <p>BTS SIO - Portfolio</p>
+        <div style="height: 100px;"></div>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#moi">A propos de moi</a></li>
+            <li class="nav-item"><a class="nav-link" href="#BTS">La formation</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Stages">Mes Stages</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+            <li class="nav-item"><a class="nav-link" href="#veile">veille</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="moi" class="container my-5">
+            <h2>A propos de moi</h2>
+            <p>Je suis un passionné d’arts martiaux, pratiquant à la fois le judo et le JJB.
+                Toujours en quête de perfectionnement, je mets autant de rigueur sur les tatamis que dans mes études.
+                Actuellement en BTS SIO, je me forme aux métiers de l’informatique, alliant logique et stratégie, comme
+                dans mes disciplines sportives. Entre technique, discipline et persévérance, je cherche à progresser
+                aussi bien dans le combat que dans le code.</p>
+        </section>
+
+        <section id="BTS" class="container my-5">
+            <h2>Pourqoui le BTS SIO ?</h2>
+            <p>
+                Le BTS SIO (Services Informatiques aux Organisations) est un diplôme de niveau Bac +2 qui forme
+                des professionnels capables de gérer et de développer des solutions informatiques adaptées aux
+                besoins des entreprises. Il s’adresse aux passionnés d’informatique souhaitant acquérir des
+                compétences techniques et opérationnelles dans ce domaine.
+
+                Le BTS SIO se divise en deux spécialités :
+                - SISR (Solutions d’Infrastructure, Systèmes et Réseaux) : axée sur l’administration des systèmes et
+                réseaux, la cybersécurité et le support technique.
+                - SLAM (Solutions Logicielles et Applications Métier) : orientée vers le développement
+                d’applications, la programmation et la gestion de bases de données.
+
+                Ce diplôme permet d’accéder à des métiers comme développeur, administrateur systèmes et réseaux,
+                technicien support, analyste programmeur ou encore de poursuivre vers une licence ou un bachelor en
+                informatique. Avec l’évolution constante des technologies, le BTS SIO offre de nombreuses
+                opportunités dans le secteur du numérique.
+            </p>
+        </section>
+
+        <section id="Stages" class="container my-5">
+            <h2>Mes stages durant la formation</h2>
+            <p>Des informations détaillées sur les stages suivis dans le cadre du BTS SIO.</p>
+        </section>
+
+        <section id="projects" class="container my-5">
+            <h2>Mes Projets</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Projet 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 1 : GeoWorld</h5>
+                            <p class="card-text">Description du projet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Projet 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 2 : Sushi-App</h5>
+                            <p class="card-text">Description du projet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Projet 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 3 : Kotlin's Bizzares Adventures</h5>
+                            <p class="card-text">Description du projet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="container my-5">
+            <h2>Compétences</h2>
+            <p>Description des compétences acquises durant le BTS SIO.</p>
+        </section>
+
+        <section id="veile" class="container my-5">
+            <h2>Veille Technologique</h2>
+            <p>Quelques mots sur la veille technologique dans le domaine de l'informatique.</p>
+        </section>
+
+        <section id="contact" class="container my-5">
+            <h2>Contact</h2>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nom</label>
+                    <input type="text" class="form-control bg-dark text-light">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control bg-dark text-light">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control bg-dark text-light" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer text-white text-center py-3">
+        <p>&copy; 2025 Mon Portfolio - BTS SIO</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
