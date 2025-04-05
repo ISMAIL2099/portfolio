@@ -101,6 +101,26 @@
             background-color: #1d4ed8; /* Bleu royal pour le hover */
         }
 
+        .card-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+/* Pour activer le scroll fluide */
+html {
+    scroll-behavior: smooth;
+}
+
     </style>
 </head>
 
@@ -135,13 +155,35 @@
 
     <main>
         <section id="moi" class="container my-5">
-            <h2 class="text-center">A propos de moi</h2>
-            <p class="text-center">Je suis un passionné d’arts martiaux, pratiquant à la fois le judo et le JJB.
+            <h2 class="text-center">À propos de moi</h2>
+        
+            <!-- Deux images centrées sur une ligne -->
+            <div class="row justify-content-center text-center mb-4">
+                <div class="col-md-4">
+                    <img src="images/aPropos/imageJJBClub.jpeg" alt="JJB Club" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/aPropos/imageJJBThiago.jpeg" alt="JJB Thiago" class="img-fluid rounded">
+                </div>
+            </div>
+        
+            <!-- Paragraphe centré -->
+            <p class="text-center">
+                Je suis un passionné d’arts martiaux, pratiquant à la fois le judo et le JJB.
                 Toujours en quête de perfectionnement, je mets autant de rigueur sur les tatamis que dans mes études.
                 Actuellement en BTS SIO, je me forme aux métiers de l’informatique, alliant logique et stratégie, comme
                 dans mes disciplines sportives. Entre technique, discipline et persévérance, je cherche à progresser
-                aussi bien dans le combat que dans le code.</p>
+                aussi bien dans le combat que dans le code.
+            </p>
+        
+            <!-- Une image centrée en dessous -->
+            <div class="row justify-content-center text-center mt-4">
+                <div class="col-md-4">
+                    <img src="images/aPropos/imageJJB1.jpeg" alt="JJB1" class="img-fluid rounded">
+                </div>
+            </div>
         </section>
+        
 
         <section id="BTS" class="container my-5">
             <h2 class="text-center">Pourquoi le BTS SIO ?</h2>
@@ -163,11 +205,14 @@
                     opportunités dans le secteur du numérique.</center>
             </p>
             <div class="row">
-                <h2 class="text-center">Option SLAM</h2>
-                <p>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme en deux ans qui forme des
-                    spécialistes en informatique. Il propose deux options : SLAM (Solutions Logicielles et Applications
-                    Métier) et SISR (Solutions d’Infrastructure, Systèmes et Réseaux).
-                </p>
+                <h2 class="text-center">Pourquoi l'option SLAM ?</h2>
+<p>
+    J’ai choisi l’option SLAM car ce que j’aime avant tout, c’est créer. Concevoir des applications, coder des fonctionnalités utiles, voir une idée devenir un projet réel.
+</p>
+<p>
+    Grâce à l'option SLAM, j’ai pu approfondir mes compétences en développement web et logiciel, en bases de données, et en gestion de projet. Cette spécialité me permet de m’améliorer techniquement, de résoudre des problèmes de manière logique et de construire des solutions nouvelles. C’est exactement ce que je recherchais.
+</p>
+
             </div>
         </section>
 
@@ -184,14 +229,41 @@
                 <div class="row">
                     <!-- Colonne gauche -->
                     <div class="col-md-6">
-                        <h3>Premier Texte</h3>
-                        <p>Voici le premier texte. Il sera affiché dans la première colonne.</p>
+                        <h3>Stage en Première Année</h3>
+                        <p>
+                            Lors de mon stage de première année, j'ai eu l'opportunité de travailler sur la conception d'un site internet. Le projet a été divisé en plusieurs étapes clés, ce qui m'a permis d'apprendre l'ensemble du processus de développement web, de la planification à la mise en ligne.
+                        </p>
+                        
+                        <h4>1. Cahier des charges</h4>
+                        <p>
+                            J'ai commencé par la rédaction du <strong>cahier des charges</strong>, une étape essentielle pour définir les besoins et les objectifs du site. Ce document précisait les fonctionnalités, l'ergonomie, et les exigences techniques du site, permettant ainsi de cadrer le projet.
+                        </p>
+                    
+                        <h4>2. Maquette</h4>
+                        <p>
+                            Ensuite, j'ai réalisé une <strong>maquette</strong> du site. À l'aide d'outils de design, j'ai pu visualiser l'interface utilisateur (UI), réfléchir à l'architecture des pages et à la disposition des éléments. Cette étape a permis de créer une représentation visuelle de ce à quoi le site allait ressembler une fois développé.
+                        </p>
+                    
+                        <h4>3. Codage</h4>
+                        <p>
+                            Après validation de la maquette, j'ai procédé à la phase de <strong>codage</strong>. J'ai utilisé des langages comme <em>HTML</em>, <em>CSS</em> et <em>JavaScript</em> pour traduire la maquette en une version interactive du site. J'ai appris à structurer les pages, à les styliser et à ajouter des fonctionnalités dynamiques.
+                        </p>
+                    
+                        <p>
+                            Ce stage m'a permis de comprendre les étapes de conception d'un site web, tout en me familiarisant avec les outils et les technologies nécessaires pour mener à bien un projet web de A à Z. J'ai également appris à travailler en équipe, à respecter des délais et à prendre en compte les besoins des utilisateurs tout au long du processus de développement.
+                        </p>
                     </div>
+                    
             
                     <!-- Colonne droite -->
                     <div class="col-md-6">
-                        <h3>Deuxième Texte</h3>
-                        <p>Voici le deuxième texte. Il sera affiché dans la deuxième colonne.</p>
+                        <h3>stage en deuxième année</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Voici le deuxième texte. Il sera affiché dans la deuxième colonne.</p>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -205,12 +277,73 @@
                         <img src="https://via.placeholder.com/300" class="card-img-top" alt="Projet 1">
                         <div class="card-body">
                             <h5 class="card-title">Projet 1 : GeoWorld</h5>
+                            <img src="images/projets/imageGeoWorld.png" alt="">
                             <p class="card-text">Description du projet.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Ajouter d'autres projets ici -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Projet 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 2 : Sushi-App</h5>
+                            <img src="images/projets/sushi-app.jpeg" alt="">
+                            <p class="card-text">Description du projet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Projet 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 3 : Kotlin's Bizzares Adventures</h5>
+                            <img src="images/projets/KotlinAventure.webp" alt="">
+                            <p class="card-text">Description du projet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Projet 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 4 : Projet savon</h5>
+                            <img src="images/projets/savon-d-alep.jpg" alt="">
+                            <p class="card-text">Description du projet.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section id="skills" class="container my-5">
+            <h2 class="text-center">Compétences</h2>
+            <div class="mb-3">
+                <label>Développement web (HTML, CSS, JavaScript, PHP)</label>
+                <div class="img">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Gestion de base de données (MySQL, PostgreSQL)</label>
+                <div class="img">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Cybersécurité et réseau</label>
+                <div class="img">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section id="veile" class="container my-5">
+            <h2 class="text-center">Veille technologique</h2>
+            <p class="text-center">Je suis un passionné d’arts martiaux, pratiquant à la fois le judo et le JJB.
+                Toujours en quête de perfectionnement, je mets autant de rigueur sur les tatamis que dans mes études.
+                Actuellement en BTS SIO, je me forme aux métiers de l’informatique, alliant logique et stratégie, comme
+                dans mes disciplines sportives. Entre technique, discipline et persévérance, je cherche à progresser
+                aussi bien dans le combat que dans le code.</p>
         </section>
 
         <section id="contact" class="container my-5">
