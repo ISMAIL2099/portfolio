@@ -155,34 +155,58 @@ html {
 
     <main>
         <section id="moi" class="container my-5">
-            <h2 class="text-center">À propos de moi</h2>
+            <h2 class="text-center mb-4 display-5 fw-bold">À propos de moi</h2>
         
-            <!-- Deux images centrées sur une ligne -->
-            <div class="row justify-content-center text-center mb-4">
+            <!-- Ligne d'images principales -->
+            <div class="row justify-content-center text-center g-4 mb-5 align-items-start">
+                <!-- Image de gauche -->
                 <div class="col-md-4">
-                    <img src="images/aPropos/imageJJBClub.jpeg" alt="JJB Club" class="img-fluid rounded">
+                    <img src="images/aPropos/imageJJB1.jpeg" alt="JJB1"
+                        class="img-fluid rounded shadow"
+                        style="height: 420px; object-fit: cover;">
                 </div>
+            
+                <!-- Image du CV (centrée) -->
                 <div class="col-md-4">
-                    <img src="images/aPropos/imageJJBThiago.jpeg" alt="JJB Thiago" class="img-fluid rounded">
+                    <img src="fichierLiens/cv/Ismael AZIZ-2_page-0001.jpg" alt="CV Ismael Aziz"
+                        class="img-fluid rounded shadow"
+                        style="height: 300px; object-fit: cover;">
+                    <a href="fichierLiens/cv/Ismael AZIZ-2.pdf" target="_blank" class="btn btn-primary mt-2">Voir mon CV</a>
+                </div>
+            
+                <!-- Image de droite -->
+                <div class="col-md-4">
+                    <img src="images/aPropos/imageJJBThiago.jpeg" alt="JJB Thiago"
+                        class="img-fluid rounded shadow"
+                        style="height: 420px; object-fit: cover;">
+                </div>
+            </div>
+            
+            
+        
+            <!-- Paragraphe -->
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <p class="text-center fs-5">
+                        Je suis un passionné d’arts martiaux, pratiquant à la fois le <strong>judo</strong> et le <strong>JJB</strong>.  
+                        Toujours en quête de perfectionnement, je mets autant de rigueur sur les tatamis que dans mes études.  
+                        Actuellement en <strong>BTS SIO</strong>, je me forme aux métiers de l’informatique, alliant logique et stratégie, comme dans mes disciplines sportives.  
+                        Entre technique, discipline et persévérance, je cherche à progresser aussi bien dans le <em>combat</em> que dans le <em>code</em>.
+                    </p>
                 </div>
             </div>
         
-            <!-- Paragraphe centré -->
-            <p class="text-center">
-                Je suis un passionné d’arts martiaux, pratiquant à la fois le judo et le JJB.
-                Toujours en quête de perfectionnement, je mets autant de rigueur sur les tatamis que dans mes études.
-                Actuellement en BTS SIO, je me forme aux métiers de l’informatique, alliant logique et stratégie, comme
-                dans mes disciplines sportives. Entre technique, discipline et persévérance, je cherche à progresser
-                aussi bien dans le combat que dans le code.
-            </p>
-        
-            <!-- Une image centrée en dessous -->
-            <div class="row justify-content-center text-center mt-4">
-                <div class="col-md-4">
-                    <img src="images/aPropos/imageJJB1.jpeg" alt="JJB1" class="img-fluid rounded">
+            <!-- Images complémentaires -->
+            <div class="row justify-content-center text-center g-4 mt-5">
+                <div class="col-12">
+                    <img src="images/aPropos/imageJJBClub.jpeg" 
+                        alt="JJB Club" 
+                        class="img-fluid rounded shadow w-100"
+                        style="max-height: 500px; object-fit: cover;">
                 </div>
             </div>
         </section>
+        
         
 
         <section id="BTS" class="container my-5">
@@ -258,11 +282,18 @@ html {
                     <!-- Colonne droite -->
                     <div class="col-md-6">
                         <h3>stage en deuxième année</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p>Voici le deuxième texte. Il sera affiché dans la deuxième colonne.</p>
-                            </div>
-                        </div>
+                        
+                            
+                                <p>Lors de mon deuxième stage j'ai pris de mon temp pour fair un compte-rendu qui résume ce que j'ai fait et appris.</p>
+                            
+                                <a href="fichierLiens/stage/Compte-rendu-de-stage.pdf">
+                                <img src="fichierLiens/stage/comptreRendu.png" alt="" class="img-fluid">
+                                </a>
+                                <a href="StageDelpharm/projet interface/frontend/PageAccueil.html" class="btn mt-3"
+                                    style="background-color: #007bff; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background-color 0.3s;">
+                                    Voir le site réalisé durant le stage
+                                </a>
+
                         
                     </div>
                 </div>
